@@ -27,6 +27,8 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
+    display: flex;
+    justify-content: center;
     padding: 0.5em 1em;
     font-family: $sans-serif-narrow;
 
@@ -36,6 +38,7 @@
 
     nav {
       z-index: 10;
+      width: 100%;
     }
 
     a {
@@ -45,12 +48,17 @@
 }
 
 .masthead__menu {
-  text-align: center; //调整菜单布局
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+  }
+
+  ul.visible-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
